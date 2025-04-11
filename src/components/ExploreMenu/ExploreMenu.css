@@ -50,3 +50,10 @@
     border: 4px solid lightgreen;
     padding : 4px;
 }
+
+@media (max-width:1050px) {
+    .exp-menu-text{
+        max-width: 100%;
+        font-size: 14px;
+    }
+}

@@ -5,6 +5,7 @@
   margin: 0px;
   box-sizing: border-box;
   font-family: Ubuntu;
+  scroll-behavior: smooth;
 }
 
 body{

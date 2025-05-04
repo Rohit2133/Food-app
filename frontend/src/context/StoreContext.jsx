@@ -4,15 +4,16 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext();
 
 const StoreContextProvider = (props) => {
-
+    const url = "http://localhost:4000";
     const [cartItems,setCartItems] = useState({});
+    const [token,setToken] = useState("");
 
-    const addToCart = (itmeId) => {
-        if(!cartItems[itmeId]){
-            setCartItems((prev) => ({ ...prev, [itmeId]: 1 }));
+    const addToCart = (itemId) => {
+        if(!cartItems[itemId]){
+            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
         }
         else{
-            setCartItems((prev) => ({ ...prev, [itmeId]: prev[itmeId] + 1 }));
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
         }    
     }
 
@@ -31,13 +32,22 @@ const StoreContextProvider = (props) => {
         return totalAmount;
     }
 
+    useEffect(() =>{
+        if(localStorage.getItem("token")){
+            setToken(localStorage.getItem("token"));
+        }
+    },[])
+
     const contextValue = {
         food_list,
         cartItems,
         setCartItems,
         addToCart,
         removeFromCart,
-        getTotalCartAmount
+        getTotalCartAmount,
+        url,
+        token,
+        setToken
     }
 
     return (

@@ -16,11 +16,11 @@ const App = () => {
       <div className='app'>
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>
-          <Route path='/Food-app' element={<Home />} />
-          <Route path='/Food-app/cart' element={<Cart />} />
-          <Route path='/Food-app/order' element={<PlaceOrder />} />
-          <Route path='/Food-app/verify' element={<Verify/>}/>
-          <Route path='/Food-app/myorders' element={<MyOrders/>}/>
+          <Route path='/' element={<Home />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/order' element={<PlaceOrder />} />
+          <Route path='/verify' element={<Verify/>}/>
+          <Route path='/myorders' element={<MyOrders/>}/>
         </Routes>
       </div>
       <Footer />

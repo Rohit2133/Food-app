@@ -53,10 +53,10 @@ const PlaceOrder = () => {
   const navigate = useNavigate();
   useEffect(()=>{
     if(!token){
-      navigate('/Food-app/cart')
+      navigate('/cart')
     }
     else if(getTotalCartAmount() === 0){
-      navigate('/Food-app/cart')
+      navigate('/cart')
     }
   },[token])
 

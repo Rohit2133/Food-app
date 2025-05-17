@@ -57,7 +57,7 @@ const Cart = () => {
               <b>${getTotalCartAmount() === 0 ? 0 :getTotalCartAmount()+2}</b>
             </div>
           </div>
-          <button onClick={()=> navigate('/Food-app/order')} >PROCEED TO CHECKOUT</button>
+          <button onClick={()=> navigate('/order')} >PROCEED TO CHECKOUT</button>
         </div>
         <div className="promocode">
           <div>

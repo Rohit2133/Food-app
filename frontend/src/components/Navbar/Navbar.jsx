@@ -13,13 +13,13 @@ const navbar = ({setShowLogin}) => {
     const logout = () =>{
       localStorage.removeItem("token");
       setToken("");
-      navigate("/Food-app");
+      navigate("/");
     }
   return (
     <div className='nav'>
-      <Link to = '/Food-app'><img src={assets.logo} alt="" className="logo" /></Link>
+      <Link to = '/'><img src={assets.logo} alt="" className="logo" /></Link>
       <ul className="nav-menu">
-        <Link to ='/Food-app' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
+        <Link to ='/' onClick={()=>setMenu("home")} className={menu==="home"?"active":""}>Home</Link>
         <a href='#exp-menu' onClick={()=>setMenu("menu")}  className={menu==="menu"?"active":""}>Menu</a>
         <a href='#app-Download' onClick={()=>setMenu("mobile")}  className={menu==="mobile"?"active":""}>Mobile App</a>
         <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact Us</a>
@@ -27,14 +27,14 @@ const navbar = ({setShowLogin}) => {
       <div className="nav-right">
         <img src={assets.search_icon} alt="" className="search" />
         <div className="nav-search-icon">
-          <Link to='/Food-app/cart'><img src={assets.basket_icon} alt="" /></Link>
+          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
           <div className={getTotalCartAmount()===0?"":"dot"}></div>
         </div>
         {!token ? <button onClick={()=>setShowLogin(true)} >Sign In</button>
         : <div className='navbar-profile'>
             <img src={assets.profile_icon} alt="" />
             <ul className="nav-profile-dropdown">
-              <li onClick={()=>{navigate('/Food-app/myorders')}}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
+              <li onClick={()=>{navigate('/myorders')}}><img src={assets.bag_icon} alt="" /><p>Orders</p></li>
               <hr />
               <li onClick={logout}><img src={assets.logout_icon} alt=""/><p>Logout</p></li>
             </ul>

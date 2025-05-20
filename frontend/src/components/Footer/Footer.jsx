@@ -6,8 +6,8 @@ const Footer = () => {
         <div className='footer' id='footer'>
             <div className="footer-content">
                 <div className="content-left">
-                    <img src={assets.logo} alt="" />
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, fuga? Velit cupiditate quidem nihil ipsam porro ducimus ratione. Fuga dignissimos harum hic autem!</p>
+                    <img style={{width:400}} src={assets.logo_full} alt="" />
+                    <p>Craving authentic Indian flavors, fast? <b>SwaadExpress</b> delivers mouthwatering curries, tandoori, and street food right to your door—quick, fresh, and packed with taste. Your go-to for speedy, flavorful meals!</p>
                     <div className="footer-social">
                         <img src={assets.facebook_icon} alt="" />
                         <img src={assets.twitter_icon} alt="" />
@@ -32,7 +32,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr />
-            <p className="footer-copyright">Copyright 2025 © Tomato.com - All rights reserved.</p>
+            <p className="footer-copyright">Copyright 2025 © SwaadExpress.com - All rights reserved.</p>
         </div>
     )
 }

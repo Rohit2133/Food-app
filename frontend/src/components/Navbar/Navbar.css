@@ -5,7 +5,8 @@
     align-items: center;
 }
 .nav .logo{
-    width: 150px;
+    width: 300px;
+    padding-top: 5px;
 }
 .nav-menu{
     display: flex;
@@ -87,7 +88,7 @@
 
 @media (max-width:1050px) {
     .nav .logo{
-        width: 140px;
+        width: 200px;
     }
     .nav-menu{
         gap: 20px;
@@ -106,7 +107,7 @@
 
 @media (max-width:900px) {
     .nav .logo{
-        width: 120px;
+        width: 200px;
     }
     .nav-menu{
         gap: 15px;

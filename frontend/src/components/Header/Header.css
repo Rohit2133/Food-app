@@ -1,9 +1,12 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('../../assets/header_img.png') no-repeat;
+    background-image: url('../../assets/header_img.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: url('../../assets/header_img.png') no-repeat; */
     position: relative;
-
+    border-radius: 20px;
 }
 .header-content{
     position: absolute;
@@ -25,7 +28,7 @@
     color : white;
     font-size: 1vw;
 }
-.header-content button{
+.header-content .button{
     border: none;
     color: #747474;
     background-color: white;
@@ -48,7 +51,7 @@
     .header-content p{
         display: none;
     }
-    .header-content button{
+    .header-content .button{
         padding: 2vw 4vw;
     }
 }
